@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Explorer — Home</title>
+    <title>Book Explorer — About</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,29 +28,16 @@
     </header>
 
     <main class="flex-1">
-      <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
-        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <h1 class="text-2xl sm:text-3xl font-bold tracking-tight">Browse Books</h1>
-          <form id="search-form" class="w-full sm:w-auto flex-1 sm:max-w-md">
-            <label for="search-input" class="sr-only">Search books</label>
-            <div class="relative">
-              <input id="search-input" name="q" type="search" placeholder="Search by title, author, or topic..." class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 pr-24 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
-              <button type="submit" class="absolute right-1.5 top-1.5 rounded-md bg-blue-600 px-3 py-1.5 text-white text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                Search
-              </button>
-            </div>
-          </form>
-        </div>
-
-        <div id="status" class="mt-6 hidden"></div>
-
-        <div id="books-grid" class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"></div>
-
-        <div id="pagination" class="mt-8 flex items-center justify-center gap-3">
-          <button id="prev-page" class="px-3 py-2 rounded-md border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed">Prev</button>
-          <span id="page-indicator" class="text-sm text-gray-600"></span>
-          <button id="next-page" class="px-3 py-2 rounded-md border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed">Next</button>
-        </div>
+      <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+        <h1 class="text-3xl font-bold tracking-tight mb-4">About</h1>
+        <p class="text-gray-700 leading-7 mb-3">Book Explorer is a lightweight, responsive web app built with HTML, Tailwind CSS, and vanilla JavaScript. Browse and search for books powered by the Google Books API, then save your favorites in your browser using localStorage.</p>
+        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+          <li>Browse results with pagination</li>
+          <li>Full-text search across titles, authors, and topics</li>
+          <li>One-click add/remove favorites</li>
+          <li>Favorites persist in localStorage</li>
+          <li>Responsive layout across mobile, tablet, and desktop</li>
+        </ul>
       </section>
     </main>
 
@@ -62,6 +49,5 @@
     </footer>
 
     <script type="module" src="assets/js/nav.js"></script>
-    <script type="module" src="assets/js/home.js"></script>
   </body>
 </html>
